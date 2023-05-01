@@ -15,4 +15,4 @@ inherits = "tokyonight_storm"
 background_highlight = "#6c76a6"
 foreground_gutter = "#6c76a6"
 comment = "#b6bbd3"
-# cursorline = "#41496b"
+# cursorline = "#41496b

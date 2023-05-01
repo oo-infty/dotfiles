@@ -4,4 +4,4 @@ inherits = "tokyonight_storm"
 
 [palette]
 background_highlight = "#4a527a"
-foreground_gutter = "#545c83"
+foreground_gutter = "#545c83
