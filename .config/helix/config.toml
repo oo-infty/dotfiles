@@ -1,0 +1,96 @@
+theme = "my_tokyonight_storm_transparent"
+
+[editor]
+line-number = "relative"
+completion-trigger-len = 1
+bufferline = "always"
+idle-timeout = 0
+color-modes = true
+cursorline = true
+true-color = true
+
+[editor.statusline]
+left = ["mode", "spacer", "version-control", "file-name", "spinner", "diagnostics"]
+right = ["position", "primary-selection-length", "total-line-numbers", "file-encoding", "file-line-ending", "file-type"]
+
+[editor.statusline.mode]
+normal = "NORMAL"
+insert = "INSERT"
+select = "SELECT"
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "block"
+
+[editor.indent-guides]
+render = true
+skip-levels = 1
+
+[keys.normal]
+h = "insert_mode"
+j = "move_char_left"
+J = "move_prev_long_word_start"
+k = "move_line_down"
+i = "move_line_up"
+H = "insert_at_line_start"
+L = "move_next_word_end"
+K = ["move_line_down", "move_line_down", "move_line_down", "move_line_down", "move_line_down"]
+I = ["move_line_up", "move_line_up", "move_line_up", "move_line_up", "move_line_up"]
+W = ":write"
+E = ":quit"
+z = { k = "scroll_down", i = "scroll_up" }
+x = ["move_prev_word_end", "move_next_word_start", "trim_selections"]
+X = "extend_line_below"
+
+[keys.normal.w]
+w = "rotate_view"
+j = "jump_view_left"
+k = "jump_view_down"
+l = "jump_view_right"
+i = "jump_view_up"
+J = ["vsplit", "swap_view_left"]
+K = "hsplit"
+L = "vsplit"
+I = ["hsplit", "swap_view_up"]
+
+[keys.normal.g]
+j = "goto_first_nonwhitespace"
+k = "move_line_down"
+i = "move_line_up"
+l = "goto_line_end"
+h = "goto_line_start"
+
+[keys.select]
+h = "insert_mode"
+j = "extend_char_left"
+J = "extend_prev_long_word_start"
+k = "extend_line_down"
+i = "extend_line_up"
+H = "insert_at_line_start"
+L = "extend_next_word_end"
+K = ["extend_line_down", "extend_line_down", "extend_line_down", "extend_line_down", "extend_line_down"]
+I = ["extend_line_up", "extend_line_up", "extend_line_up", "extend_line_up", "extend_line_up"]
+W = ":write"
+E = ":quit"
+z = { k = "scroll_down", i = "scroll_up" }
+x = ["move_prev_word_end", "move_next_word_start", "trim_selections"]
+X = "extend_line_below"
+
+[keys.select.w]
+w = "rotate_view"
+j = "jump_view_left"
+k = "jump_view_down"
+l = "jump_view_right"
+i = "jump_view_up"
+J = ["vsplit", "swap_view_left"]
+K = "hsplit"
+L = "vsplit"
+I = ["hsplit", "swap_view_up"]
+
+[keys.select.g]
+j = "goto_first_nonwhitespace"
+k = "extend_line_down"
+i = "extend_line_up"
+l = "goto_line_end"
+h = "goto_line_start"

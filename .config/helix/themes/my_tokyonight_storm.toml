@@ -1,0 +1,7 @@
+# Author: Justin Chen <ctj12461@163.com>
+
+inherits = "tokyonight_storm"
+
+[palette]
+background_highlight = "#4a527a"
+foreground_gutter = "#545c83"

@@ -1,0 +1,9 @@
+[[language]]
+name = "rust"
+auto-format = true
+language-server = { command = "rustup", args = ["run", "stable", "rust-analyzer"] }
+config.check.command = "clippy"
+
+[[language]]
+name = "markdown"
+soft-wrap = { enable = true, wrap-at-text-width = false, wrap-indicator = "" }
