@@ -53,6 +53,8 @@ J = ["vsplit", "swap_view_left"]
 K = "hsplit"
 L = "vsplit"
 I = ["hsplit", "swap_view_up"]
+n = ":new"
+e = ":buffer-close"
 
 [keys.normal.g]
 j = "goto_first_nonwhitespace"
@@ -87,6 +89,8 @@ J = ["vsplit", "swap_view_left"]
 K = "hsplit"
 L = "vsplit"
 I = ["hsplit", "swap_view_up"]
+n = ":new"
+e = ":buffer-close"
 
 [keys.select.g]
 j = "goto_first_nonwhitespace"
