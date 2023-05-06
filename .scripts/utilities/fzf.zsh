@@ -3,17 +3,17 @@
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
 
-export FD_DEFAULT_OPTS='--follow --color=never -E ".git" -E "build" -E "target" -E "node_module"'
+export FD_DEFAULT_OPTS='--follow --color=always -E ".git" -E "build" -E "target" -E "node_modules"'
 
-export FZF_DEFAULT_OPTS='--reverse --scroll-off=5 --cycle --preview="$HOME/.scripts/executables/preview.zsh {}" --preview-window=border-left'
+export FZF_DEFAULT_OPTS='--ansi --reverse --scroll-off=5 --cycle --preview="$HOME/.scripts/executables/preview.zsh {}" --preview-window=border-left'
 export FZF_DEFAULT_COMMAND="fd $FD_DEFAULT_OPTS ."
 
 _fzf_compgen_path() {
-    fd $FD_DEFAULT_OPTS . "$1"
+    eval "fd $FD_DEFAULT_OPTS . \"$1\""
 }
 
 _fzf_compgen_dir() {
-    fd --type d $FD_DEFAULT_OPTS . "$1"
+    eval "fd --type d $FD_DEFAULT_OPTS . \"$1\""
 }
 
 rgi() {
