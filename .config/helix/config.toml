@@ -62,6 +62,14 @@ k = "move_line_down"
 i = "move_line_up"
 l = "goto_line_end"
 h = "goto_line_start"
+s = "no_op"
+
+[keys.normal.Z]
+k = "scroll_down"
+K = ["scroll_down", "scroll_down", "scroll_down", "scroll_down", "scroll_down"]
+i = "scroll_up"
+I = ["scroll_up", "scroll_up", "scroll_up", "scroll_up", "scroll_up"]
+j = "no_op"
 
 [keys.select]
 h = "insert_mode"
@@ -98,3 +106,10 @@ k = "extend_line_down"
 i = "extend_line_up"
 l = "goto_line_end"
 h = "goto_line_start"
+
+[keys.select.Z]
+k = "scroll_down"
+K = ["scroll_down", "scroll_down", "scroll_down", "scroll_down", "scroll_down"]
+i = "scroll_up"
+I = ["scroll_up", "scroll_up", "scroll_up", "scroll_up", "scroll_up"]
+j = "no_op"
