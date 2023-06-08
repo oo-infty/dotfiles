@@ -1,0 +1,55 @@
+layout {
+    pane size=1 borderless=true {
+        plugin location="zellij:tab-bar"
+    }
+    pane
+    pane size=1 borderless=true {
+        plugin location="zellij:status-bar"
+    }
+
+    tab_template name="ui" {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+    swap_tiled_layout name="master" {
+        ui max_panes=9 {
+            pane split_direction="vertical" {
+                pane focus=true
+                pane { children; }
+            }
+        }
+    }
+}
+
+keybinds {
+    shared {
+        bind "Alt N" { NewPane; MovePane "Left"; }
+        bind "Alt C" {
+            MoveFocus "Right";
+            MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down";
+            MovePane "Left";
+            MoveFocus "Right";
+            MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down";
+            CloseFocus;
+            MoveFocus "Left"
+        }
+        bind "Alt F" { ToggleFocusFullscreen; }
+        bind "Alt M" {
+            MovePane "Down"; MovePane "Down"; MovePane "Down"; MovePane "Down"; MovePane "Down"; MovePane "Down"; MovePane "Down"; MovePane "Down"; MovePane "Down"; MovePane "Down"; MovePane "Down"; MovePane "Down"; MovePane "Down"; MovePane "Down"; MovePane "Down"; 
+            MovePane "Left"
+        }
+        bind "Alt P" { FocusPreviousPane; }
+        bind "Alt O" {
+            MoveFocus "Right";
+            MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down"; MoveFocus "Down";
+            MovePane "Left";
+        }
+        bind "Alt V" { NewPane; TogglePaneEmbedOrFloating; }
+    }
+}
