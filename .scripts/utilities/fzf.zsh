@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-source /usr/share/doc/fzf/examples/completion.zsh
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 
 export FD_DEFAULT_OPTS='--follow --color=always -E ".git" -E "build" -E "target" -E "node_modules"'
 
@@ -25,6 +25,6 @@ rgi() {
         --bind "change:reload:sleep 0.2; if [[ -n {q} ]]; then; $RG_PREFIX {q}; fi || true" \
         --bind='enter:execute(hx {1} +{2})' \
         --delimiter=':' \
-        --preview='if [[ -n {1} ]]; then; batcat --style=numbers,header --color=always --highlight-line={2} {1}; fi' \
+        --preview='if [[ -n {1} ]]; then; bat --style=numbers,header --color=always --highlight-line={2} {1}; fi' \
         --preview-window=border-left
 }

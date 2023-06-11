@@ -5,5 +5,5 @@ if [[ -d $1 ]]; then
 elif [[ $1 == *.zip ]]; then
     zipinfo $1
 elif [[ -f $1 ]]; then
-    batcat --style=numbers,header --color=always $1
+    bat --style=numbers,header --color=always $1
 fi

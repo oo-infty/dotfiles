@@ -6,8 +6,8 @@ bindkey -e
 # End of lines configured by zsh-newuser-install
 
 # Zsh completion
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Zsh prompt
 if [ "$UID" -eq 0 ]; then
@@ -19,9 +19,6 @@ else
 %F{135}%n%f@%F{166}%m%f %F{118}%~%f
 \$ "
 fi
-
-# Rust
-source "$HOME/.cargo/env"
 
 # Helix
 # For WSL
@@ -38,5 +35,6 @@ source ~/.scripts/utilities/fzf.zsh
 
 # bat
 export BAT_DEFAULT_OPTS='--style=header,grid'
-alias bat="batcat $BAT_DEFAULT_OPTS"
-alias cat="batcat $BAT_DEFAULT_OPTS"
+alias bat="bat $BAT_DEFAULT_OPTS"
+alias batcat="bat $BAT_DEFAULT_OPTS"
+alias cat="bat $BAT_DEFAULT_OPTS"
