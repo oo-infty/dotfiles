@@ -91,6 +91,7 @@ keymap = [
   { keys = [";"], command = ":" },
 
   { keys = ["'"], command = ":shell " },
+  { keys = ["x"], command = "shell bash -c 'PROMPT_PREFIX=\"(nested)\" zsh'" },
 
   { keys = ["f", "t"], command = ":touch " },
   { keys = ["f", "d"], command = ":mkdir " },
