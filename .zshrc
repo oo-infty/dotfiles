@@ -10,25 +10,16 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Zsh prompt
-if [ "$UID" -eq 0 ]; then
-    export PROMPT="
-%F{135}%n%f@%F{166}%m%f %F{118}%~%f
-%# "
-else
-    export PROMPT="
-%F{135}%n%f@%F{166}%m%f %F{118}%~%f
+export PROMPT="
+$PROMPT_PREFIX %F{135}%n%f@%F{166}%m%f %F{118}%~%f
 \$ "
-fi
 
 # Helix
-# For WSL
-if [[ -e "$HOME/software/helix" ]]; then
-    export PATH="$PATH:$HOME/software/helix"
-fi
+export EDITOR='helix'
 
-alias vi='hx'
-alias vim='hx'
-alias nvim='hx'
+alias vi='helix'
+alias vim='helix'
+alias nvim='helix'
 
 # FZF
 source ~/.scripts/utilities/fzf.zsh
@@ -38,3 +29,9 @@ export BAT_DEFAULT_OPTS='--style=header,grid'
 alias bat="bat $BAT_DEFAULT_OPTS"
 alias batcat="bat $BAT_DEFAULT_OPTS"
 alias cat="bat $BAT_DEFAULT_OPTS"
+
+# Rust
+source ~/.cargo/env
+
+# joshuto
+alias jo='joshuto'
