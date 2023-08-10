@@ -6,4 +6,3 @@ config.check.command = "clippy"
 
 [[language]]
 name = "markdown"
-soft-wrap = { enable = true, wrap-at-text-width = false, wrap-indicator = "" }
