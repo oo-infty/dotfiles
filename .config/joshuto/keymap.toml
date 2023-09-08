@@ -108,7 +108,7 @@ keymap = [
   { keys = ["n"], commands = ["search_next"] },
   { keys = ["N"], commands = ["search_prev"] },
 
-  { keys = ["s"], commands = [":select --glob "]},
+  { keys = ["s"], commands = [":select_regex"]},
 
   { keys = ["a", "r"], commands = ["sort reverse"] },
   { keys = ["a", "l"], commands = ["sort lexical"] },
